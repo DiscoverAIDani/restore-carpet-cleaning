@@ -8,23 +8,23 @@
 
   <meta
     name="description"
-    content="Veteran-owned carpet and floor cleaning serving Yuba City and surrounding areas. Carpet cleaning, upholstery, tile and grout, area rugs, pet stain and odor treatment, laminate and engineered floors."
+    content="Veteran-owned carpet and floor cleaning serving Yuba City and surrounding areas. Carpet cleaning, upholstery, area rugs, tile and grout, pet stain and odor treatment, laminate and engineered floors."
   />
 
   <style>
     :root {
-      --navy: #07121d;
-      --navy2: #0d2133;
-      --blue: #168bd2;
-      --blue2: #28a9f5;
-      --gold: #f5b829;
-      --cream: #f5f3ed;
+      --navy: #07131e;
+      --navy2: #0c2234;
+      --blue: #138bd0;
+      --blue2: #35b4f7;
+      --gold: #f7be35;
+      --cream: #f4f2ec;
       --white: #ffffff;
-      --gray: #aab6c0;
-      --dark: #101820;
-      --green: #21b573;
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
-      --radius: 22px;
+      --ink: #111820;
+      --muted: #65727c;
+      --line: #dfe5e8;
+      --shadow: 0 24px 60px rgba(0,0,0,.18);
+      --radius: 24px;
     }
 
     * {
@@ -38,26 +38,25 @@
     }
 
     body {
-      font-family:
-        Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      color: var(--dark);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
       background: var(--cream);
+      color: var(--ink);
       line-height: 1.6;
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       display: block;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .container {
-      width: min(1160px, 92%);
+      width: min(1180px, 92%);
       margin: auto;
     }
 
@@ -67,58 +66,54 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(7, 18, 29, 0.96);
+      background: rgba(7,19,30,.97);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
     .nav {
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 74px;
-      gap: 20px;
+      gap: 30px;
     }
 
-    .brand {
+    .logo-wrap {
       display: flex;
       align-items: center;
       gap: 12px;
       color: white;
     }
 
-    .brand-mark {
-      width: 48px;
-      height: 48px;
+    .logo-wrap img {
+      width: 58px;
+      height: 58px;
+      object-fit: cover;
       border-radius: 50%;
-      background:
-        linear-gradient(145deg, var(--blue2), var(--blue));
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 20px;
-      border: 3px solid var(--gold);
-      box-shadow: 0 0 25px rgba(40, 169, 245, 0.32);
+      border: 2px solid var(--gold);
+      background: white;
     }
 
-    .brand strong {
+    .logo-text strong {
       display: block;
-      font-size: 1.05rem;
+      font-size: 1rem;
       line-height: 1.1;
     }
 
-    .brand small {
-      color: #c6d4df;
-      font-size: 0.75rem;
+    .logo-text span {
+      font-size: .74rem;
+      color: #b7c6d0;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
       align-items: center;
-      gap: 24px;
+      list-style: none;
+      gap: 23px;
       color: white;
-      font-size: 0.94rem;
+      font-weight: 650;
+      font-size: .92rem;
     }
 
     nav a:hover {
@@ -126,90 +121,78 @@
     }
 
     .nav-call {
-      padding: 11px 17px;
-      border-radius: 999px;
       background: var(--gold);
       color: #111;
-      font-weight: 800;
+      padding: 11px 17px;
+      border-radius: 999px;
+      font-weight: 900;
     }
 
     /* HERO */
 
     .hero {
-      min-height: 760px;
-      display: flex;
-      align-items: center;
       position: relative;
       overflow: hidden;
-
       background:
-        radial-gradient(
-          circle at 75% 30%,
-          rgba(28, 148, 220, 0.3),
-          transparent 30%
-        ),
-        linear-gradient(
-          115deg,
-          rgba(7, 18, 29, 0.99) 0%,
-          rgba(7, 18, 29, 0.95) 48%,
-          rgba(7, 18, 29, 0.78) 100%
-        );
+        radial-gradient(circle at 80% 30%, rgba(19,139,208,.25), transparent 30%),
+        linear-gradient(115deg, #06111b 0%, #0b2031 60%, #102d43 100%);
       color: white;
+      padding: 95px 0 80px;
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      inset: auto -15% -35% auto;
-      width: 650px;
-      height: 650px;
+      right: -180px;
+      bottom: -220px;
+      width: 600px;
+      height: 600px;
       border-radius: 50%;
-      background: rgba(22, 139, 210, 0.12);
-      filter: blur(10px);
+      background: rgba(53,180,247,.10);
     }
 
     .hero-grid {
       position: relative;
       z-index: 2;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 70px;
+      grid-template-columns: 1.03fr .97fr;
+      gap: 64px;
       align-items: center;
     }
 
-    .eyebrow {
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(245, 184, 41, 0.12);
-      border: 1px solid rgba(245, 184, 41, 0.4);
-      color: var(--gold);
-      border-radius: 999px;
       padding: 8px 13px;
+      border-radius: 999px;
+      color: var(--gold);
+      background: rgba(247,190,53,.1);
+      border: 1px solid rgba(247,190,53,.35);
+      font-size: .78rem;
+      font-weight: 850;
       text-transform: uppercase;
-      letter-spacing: 0.09em;
-      font-size: 0.78rem;
-      font-weight: 800;
+      letter-spacing: .09em;
       margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 7vw, 6.4rem);
-      line-height: 0.91;
-      letter-spacing: -0.055em;
-      max-width: 850px;
-      margin-bottom: 28px;
+      max-width: 780px;
+      font-size: clamp(3.2rem, 7vw, 6.3rem);
+      letter-spacing: -.06em;
+      line-height: .9;
+      margin-bottom: 26px;
     }
 
     .hero h1 span {
-      color: var(--blue2);
       display: block;
+      color: var(--blue2);
     }
 
     .hero-copy {
-      color: #d9e3ea;
+      max-width: 670px;
+      color: #d5e0e7;
       font-size: 1.16rem;
-      max-width: 650px;
       margin-bottom: 30px;
     }
 
@@ -220,129 +203,89 @@
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 13px;
-      margin-bottom: 32px;
+      gap: 12px;
+      margin-bottom: 30px;
     }
 
     .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      padding: 15px 22px;
+      align-items: center;
+      padding: 15px 21px;
       border-radius: 12px;
-      font-weight: 850;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 2px solid transparent;
+      font-weight: 900;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
 
     .btn:hover {
       transform: translateY(-2px);
     }
 
-    .btn-primary {
-      background: var(--blue);
-      color: white;
-      box-shadow: 0 12px 28px rgba(22, 139, 210, 0.28);
-    }
-
     .btn-gold {
       background: var(--gold);
-      color: #141414;
+      color: #111;
+    }
+
+    .btn-blue {
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 12px 26px rgba(19,139,208,.28);
     }
 
     .btn-outline {
-      border-color: rgba(255, 255, 255, 0.35);
+      border: 2px solid rgba(255,255,255,.3);
       color: white;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255,255,255,.04);
     }
 
-    .trust-mini {
+    .hero-points {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
-      color: #c6d4df;
-      font-size: 0.9rem;
+      gap: 17px;
+      font-size: .9rem;
+      color: #bfccd5;
     }
 
-    .trust-mini span::before {
+    .hero-points span::before {
       content: "✓";
       color: var(--gold);
       font-weight: 900;
       margin-right: 6px;
     }
 
-    /* HERO RESULT CARD */
-
-    .result-card {
-      border-radius: 30px;
-      overflow: hidden;
-      background: white;
-      color: var(--dark);
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .result-visual {
-      height: 420px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .before-box,
-    .after-box {
+    .hero-proof {
       position: relative;
-      display: grid;
-      place-items: end center;
-      padding: 24px;
-      background-size: cover;
-      background-position: center;
     }
 
-    .before-box {
-      background:
-        linear-gradient(rgba(39, 30, 21, 0.12), rgba(39, 30, 21, 0.25)),
-        linear-gradient(145deg, #65554b, #9a8172);
+    .proof-image {
+      background: white;
+      padding: 10px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      transform: rotate(1deg);
     }
 
-    .after-box {
-      background:
-        linear-gradient(rgba(235, 222, 201, 0.05), rgba(95, 77, 62, 0.05)),
-        linear-gradient(145deg, #d8c7b2, #b9a28e);
+    .proof-image img {
+      border-radius: 21px;
+      max-height: 610px;
+      object-fit: cover;
     }
 
-    .photo-label {
-      background: rgba(7, 18, 29, 0.88);
-      color: white;
-      padding: 8px 15px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-    }
-
-    .after-box .photo-label {
+    .proof-tag {
+      position: absolute;
+      left: -25px;
+      bottom: 32px;
       background: var(--gold);
       color: #111;
+      padding: 14px 18px;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      font-weight: 900;
     }
 
-    .result-card-copy {
-      padding: 24px 26px 28px;
-    }
+    /* TRUST */
 
-    .result-card-copy strong {
-      display: block;
-      font-size: 1.24rem;
-      margin-bottom: 5px;
-    }
-
-    .result-card-copy p {
-      color: #65727d;
-      font-size: 0.92rem;
-    }
-
-    /* TRUST BAR */
-
-    .trust-bar {
+    .trust {
       background: var(--blue);
       color: white;
     }
@@ -354,8 +297,8 @@
     }
 
     .trust-item {
-      padding: 24px 14px;
-      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 25px 15px;
+      border-right: 1px solid rgba(255,255,255,.2);
     }
 
     .trust-item:last-child {
@@ -368,8 +311,8 @@
     }
 
     .trust-item span {
-      font-size: 0.82rem;
-      opacity: 0.8;
+      opacity: .8;
+      font-size: .8rem;
     }
 
     /* SECTIONS */
@@ -378,35 +321,35 @@
       padding: 95px 0;
     }
 
+    .kicker {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: .78rem;
+      font-weight: 900;
+      margin-bottom: 9px;
+    }
+
     .section-heading {
-      max-width: 700px;
-      margin-bottom: 48px;
+      max-width: 740px;
+      margin-bottom: 45px;
     }
 
     .section-heading.center {
+      text-align: center;
       margin-left: auto;
       margin-right: auto;
-      text-align: center;
-    }
-
-    .kicker {
-      color: var(--blue);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 0.78rem;
-      margin-bottom: 10px;
     }
 
     .section-heading h2 {
-      font-size: clamp(2.25rem, 5vw, 4rem);
-      line-height: 1.03;
-      letter-spacing: -0.045em;
-      margin-bottom: 14px;
+      font-size: clamp(2.3rem, 5vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -.05em;
+      margin-bottom: 13px;
     }
 
     .section-heading p {
-      color: #65727d;
+      color: var(--muted);
       font-size: 1.05rem;
     }
 
@@ -422,113 +365,104 @@
       gap: 18px;
     }
 
-    .service-card {
+    .service {
       padding: 28px;
       background: var(--cream);
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      border: 1px solid #e2e6e8;
-      transition: 0.25s ease;
+      transition: .22s ease;
     }
 
-    .service-card:hover {
+    .service:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(18, 36, 52, 0.09);
-      border-color: #b5dff5;
+      border-color: #aeddf4;
+      box-shadow: 0 14px 35px rgba(18,41,59,.08);
     }
 
-    .service-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 15px;
+    .icon {
+      width: 52px;
+      height: 52px;
       display: grid;
       place-items: center;
+      border-radius: 15px;
       background: var(--navy);
       color: var(--gold);
-      font-size: 1.4rem;
-      margin-bottom: 18px;
+      font-size: 1.35rem;
+      margin-bottom: 17px;
     }
 
-    .service-card h3 {
-      font-size: 1.12rem;
-      margin-bottom: 8px;
+    .service h3 {
+      font-size: 1.1rem;
+      margin-bottom: 7px;
     }
 
-    .service-card p {
-      color: #697680;
-      font-size: 0.91rem;
+    .service p {
+      color: var(--muted);
+      font-size: .91rem;
     }
 
-    /* BEFORE AFTER */
+    /* FEATURED RESULT */
 
-    .results-section {
+    .results {
       background: var(--navy);
       color: white;
     }
 
-    .results-section .section-heading p {
+    .results .section-heading p {
       color: #b8c5cf;
     }
 
-    .results-grid {
+    .feature-result {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 45px;
+      align-items: center;
     }
 
-    .result-tile {
-      background: var(--navy2);
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .feature-photo {
+      position: relative;
+      background: white;
+      padding: 10px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
     }
 
-    .result-tile-visual {
-      height: 300px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .feature-photo img {
+      border-radius: 20px;
+      max-height: 680px;
+      object-fit: contain;
+      background: #111;
     }
 
-    .result-side {
-      display: grid;
-      place-items: end center;
-      padding: 18px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.8rem;
+    .feature-copy h3 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.02;
+      letter-spacing: -.04em;
+      margin-bottom: 17px;
     }
 
-    .dirty1 {
-      background: linear-gradient(145deg, #665546, #927968);
-    }
-
-    .clean1 {
-      background: linear-gradient(145deg, #d7c2ab, #b59b83);
-    }
-
-    .dirty2 {
-      background: linear-gradient(145deg, #514a46, #82736b);
-    }
-
-    .clean2 {
-      background: linear-gradient(145deg, #c8b9aa, #948275);
-    }
-
-    .dirty3 {
-      background: linear-gradient(145deg, #7c6757, #4f4239);
-    }
-
-    .clean3 {
-      background: linear-gradient(145deg, #ded1be, #ae9981);
-    }
-
-    .result-tile p {
-      padding: 17px 20px 20px;
+    .feature-copy p {
       color: #bdc8d1;
-      font-size: 0.9rem;
+      margin-bottom: 18px;
     }
 
-    /* JAMES */
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .feature-list div {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .feature-list b {
+      color: var(--gold);
+    }
+
+    /* ABOUT */
 
     .about {
       background: white;
@@ -536,72 +470,117 @@
 
     .about-grid {
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 60px;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 62px;
       align-items: center;
     }
 
-    .owner-photo {
-      min-height: 510px;
-      border-radius: 30px;
-      background:
-        radial-gradient(circle at 50% 25%, #1e8ccb 0%, #0b2639 48%, #07121d 100%);
+    .james-image {
       position: relative;
+      border-radius: 30px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      display: grid;
-      place-items: center;
-      padding: 30px;
-      text-align: center;
+      background: var(--navy);
+    }
+
+    .james-image img {
+      min-height: 520px;
+      object-fit: cover;
+    }
+
+    .james-caption {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      padding: 16px 18px;
+      border-radius: 14px;
       color: white;
+      background: rgba(7,19,30,.86);
+      backdrop-filter: blur(7px);
     }
 
-    .owner-photo .initials {
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--gold);
-      color: var(--navy);
-      font-size: 4rem;
-      font-weight: 950;
-      border: 8px solid white;
-      margin-bottom: 20px;
+    .james-caption strong {
+      display: block;
+      font-size: 1.15rem;
     }
 
-    .owner-photo p {
-      max-width: 300px;
-      color: #d6e1e8;
+    .james-caption span {
+      color: #c3d0d8;
+      font-size: .85rem;
     }
 
     .about-copy h2 {
       font-size: clamp(2.4rem, 5vw, 4.1rem);
-      letter-spacing: -0.05em;
       line-height: 1;
-      margin-bottom: 20px;
+      letter-spacing: -.05em;
+      margin-bottom: 18px;
     }
 
     .about-copy p {
-      color: #65727d;
-      margin-bottom: 17px;
+      color: var(--muted);
+      margin-bottom: 16px;
       font-size: 1.03rem;
     }
 
     .about-list {
-      margin: 28px 0 32px;
       display: grid;
-      gap: 12px;
+      gap: 11px;
+      margin: 27px 0 30px;
     }
 
-    .about-list div {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .about-list b {
+    .about-list div::before {
+      content: "✓";
       color: var(--blue);
+      font-weight: 950;
+      margin-right: 9px;
+    }
+
+    /* TRUCK */
+
+    .truck-section {
+      padding: 0;
+      background: var(--navy);
+    }
+
+    .truck-wrap {
+      position: relative;
+      min-height: 520px;
+      overflow: hidden;
+    }
+
+    .truck-wrap img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      filter: brightness(.58);
+    }
+
+    .truck-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(7,19,30,.94), rgba(7,19,30,.4), transparent);
+    }
+
+    .truck-copy {
+      max-width: 610px;
+      color: white;
+    }
+
+    .truck-copy h2 {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: .96;
+      letter-spacing: -.055em;
+      margin-bottom: 18px;
+    }
+
+    .truck-copy p {
+      color: #d3dfe6;
+      font-size: 1.08rem;
+      margin-bottom: 25px;
     }
 
     /* PROCESS */
@@ -612,33 +591,33 @@
 
     .process-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 23px;
     }
 
     .process-card {
       background: white;
-      border-radius: var(--radius);
       padding: 34px;
-      box-shadow: 0 12px 32px rgba(18, 36, 52, 0.06);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 28px rgba(25,50,67,.05);
     }
 
-    .number {
+    .num {
       color: var(--blue);
+      opacity: .27;
       font-size: 3.5rem;
-      line-height: 1;
       font-weight: 950;
-      opacity: 0.25;
-      margin-bottom: 18px;
+      line-height: 1;
+      margin-bottom: 16px;
     }
 
     .process-card h3 {
-      margin-bottom: 8px;
-      font-size: 1.25rem;
+      font-size: 1.24rem;
+      margin-bottom: 7px;
     }
 
     .process-card p {
-      color: #65727d;
+      color: var(--muted);
     }
 
     /* REVIEWS */
@@ -649,69 +628,69 @@
     }
 
     .reviews .section-heading p {
-      color: #b6c2cb;
+      color: #b6c2ca;
     }
 
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2,1fr);
       gap: 22px;
     }
 
     .review {
-      background: rgba(255, 255, 255, 0.07);
-      padding: 30px;
+      background: rgba(255,255,255,.065);
+      border: 1px solid rgba(255,255,255,.09);
       border-radius: var(--radius);
-      border: 1px solid rgba(255, 255, 255, 0.09);
+      padding: 31px;
     }
 
     .stars {
       color: var(--gold);
-      letter-spacing: 4px;
-      margin-bottom: 16px;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
     }
 
-    .review blockquote {
+    blockquote {
       font-size: 1.1rem;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
     }
 
-    .review cite {
+    cite {
+      color: #aebdc7;
       font-style: normal;
-      color: #aebbc5;
-      font-size: 0.9rem;
+      font-size: .9rem;
     }
 
     /* AREA */
 
     .area-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 50px;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 52px;
       align-items: center;
     }
 
-    .city-tags {
+    .cities {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 25px;
+      gap: 9px;
+      margin-top: 24px;
     }
 
-    .city-tags span {
-      background: white;
-      border: 1px solid #dce4e8;
+    .cities span {
       padding: 9px 13px;
       border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.88rem;
+      background: white;
+      border: 1px solid var(--line);
+      font-size: .88rem;
+      font-weight: 750;
     }
 
     .area-card {
-      padding: 38px;
-      border-radius: 30px;
-      background: linear-gradient(145deg, var(--blue), #0b5f91);
+      background: linear-gradient(145deg, var(--blue), #075a8a);
       color: white;
+      padding: 39px;
+      border-radius: 28px;
       box-shadow: var(--shadow);
     }
 
@@ -722,8 +701,8 @@
     }
 
     .area-card p {
-      opacity: 0.9;
-      margin-bottom: 24px;
+      opacity: .9;
+      margin-bottom: 23px;
     }
 
     /* CTA */
@@ -735,16 +714,16 @@
 
     .cta-grid {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      align-items: center;
+      gap: 35px;
     }
 
     .cta h2 {
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      line-height: 1;
-      letter-spacing: -0.05em;
-      max-width: 720px;
+      font-size: clamp(2.3rem, 5vw, 4.3rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      max-width: 760px;
     }
 
     .cta .btn {
@@ -761,67 +740,69 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 50px;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 48px;
     }
 
-    .contact-info {
+    .contact-card {
       background: var(--navy);
       color: white;
       border-radius: 28px;
       padding: 38px;
     }
 
-    .contact-info h3 {
+    .contact-card h3 {
       font-size: 2rem;
-      margin-bottom: 22px;
+      line-height: 1.05;
+      margin-bottom: 25px;
     }
 
-    .contact-row {
+    .info {
       margin-bottom: 21px;
     }
 
-    .contact-row small {
+    .info small {
       display: block;
+      color: #91a5b3;
       text-transform: uppercase;
-      color: #8fa2b0;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      margin-bottom: 3px;
+      letter-spacing: .08em;
+      font-size: .72rem;
+      font-weight: 900;
+      margin-bottom: 4px;
     }
 
-    .contact-row a {
+    .info a,
+    .info span {
       font-weight: 800;
-      font-size: 1.05rem;
     }
 
-    .estimate-form {
+    form {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 15px;
     }
 
     .field {
       display: grid;
-      gap: 7px;
+      gap: 6px;
     }
 
-    .field.full {
+    .full {
       grid-column: 1 / -1;
     }
 
     label {
-      font-size: 0.85rem;
-      font-weight: 800;
+      font-size: .84rem;
+      font-weight: 850;
     }
 
     input,
     select,
     textarea {
       width: 100%;
-      border: 1px solid #d8dfe3;
-      border-radius: 12px;
       padding: 14px;
+      border-radius: 11px;
+      border: 1px solid #d8dfe3;
       font: inherit;
       background: #fbfcfd;
     }
@@ -831,22 +812,22 @@
       resize: vertical;
     }
 
-    .form-button {
+    .submit {
       grid-column: 1 / -1;
       border: 0;
-      cursor: pointer;
       background: var(--blue);
       color: white;
       padding: 15px;
-      border-radius: 12px;
+      border-radius: 11px;
+      font: inherit;
       font-weight: 900;
-      font-size: 1rem;
+      cursor: pointer;
     }
 
-    .form-note {
+    .note {
       grid-column: 1 / -1;
-      font-size: 0.78rem;
-      color: #75828c;
+      color: #77858e;
+      font-size: .78rem;
     }
 
     /* FOOTER */
@@ -854,50 +835,59 @@
     footer {
       background: #030b12;
       color: white;
-      padding: 55px 0 90px;
+      padding: 55px 0 92px;
     }
 
     .footer-grid {
       display: flex;
       justify-content: space-between;
-      gap: 35px;
       align-items: flex-start;
+      gap: 35px;
+    }
+
+    .footer-brand {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+    }
+
+    .footer-brand img {
+      width: 62px;
+      height: 62px;
+      object-fit: cover;
+      border-radius: 50%;
+      background: white;
     }
 
     footer p {
-      color: #8ea0ad;
-      font-size: 0.87rem;
-      max-width: 500px;
       margin-top: 12px;
+      color: #8fa1ae;
+      max-width: 530px;
+      font-size: .87rem;
     }
 
     .footer-links {
       display: flex;
+      gap: 16px;
       flex-wrap: wrap;
-      gap: 17px;
-      color: #c8d3db;
-      font-size: 0.9rem;
+      color: #c6d2da;
+      font-size: .88rem;
     }
 
-    /* MOBILE STICKY */
+    /* MOBILE BAR */
 
     .mobile-actions {
       display: none;
     }
 
-    /* RESPONSIVE */
-
     @media (max-width: 900px) {
+
       nav ul {
         display: none;
       }
 
-      .hero {
-        min-height: auto;
-        padding: 85px 0 70px;
-      }
-
       .hero-grid,
+      .feature-result,
       .about-grid,
       .area-grid,
       .contact-grid {
@@ -905,47 +895,52 @@
       }
 
       .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
 
-      .results-grid,
       .process-grid {
         grid-template-columns: 1fr;
       }
 
       .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
 
       .reviews-grid {
         grid-template-columns: 1fr;
       }
 
-      .cta-grid {
+      .cta-grid,
+      .footer-grid {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .footer-grid {
-        flex-direction: column;
+      .proof-tag {
+        left: 15px;
       }
     }
 
     @media (max-width: 600px) {
+
       body {
         padding-bottom: 68px;
       }
 
-      .brand small {
+      section {
+        padding: 70px 0;
+      }
+
+      .logo-text span {
         display: none;
       }
 
-      .hero h1 {
-        font-size: 3.6rem;
+      .hero {
+        padding-top: 70px;
       }
 
-      .result-visual {
-        height: 330px;
+      .hero h1 {
+        font-size: 3.55rem;
       }
 
       .services-grid {
@@ -956,35 +951,40 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      section {
-        padding: 70px 0;
-      }
-
-      .estimate-form {
+      form {
         grid-template-columns: 1fr;
       }
 
-      .field.full,
-      .form-button,
-      .form-note {
+      .full,
+      .submit,
+      .note {
         grid-column: 1;
       }
 
+      .truck-wrap,
+      .truck-wrap img {
+        height: 570px;
+      }
+
+      .truck-overlay {
+        background: rgba(7,19,30,.72);
+      }
+
       .mobile-actions {
+        position: fixed;
+        z-index: 9999;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        position: fixed;
-        bottom: 0;
         left: 0;
         right: 0;
-        z-index: 9999;
-        box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.2);
+        bottom: 0;
+        box-shadow: 0 -8px 24px rgba(0,0,0,.2);
       }
 
       .mobile-actions a {
-        padding: 16px 10px;
+        padding: 16px 8px;
         text-align: center;
-        font-weight: 900;
+        font-weight: 950;
       }
 
       .mobile-call {
@@ -1005,11 +1005,11 @@
 <header>
   <div class="container nav">
 
-    <a class="brand" href="#top">
-      <div class="brand-mark">R</div>
-      <div>
+    <a href="#top" class="logo-wrap">
+      <img src="Logo.jpg" alt="Restore Carpet Cleaning logo">
+      <div class="logo-text">
         <strong>Restore Carpet Cleaning</strong>
-        <small>and Floor Care</small>
+        <span>and Floor Care</span>
       </div>
     </a>
 
@@ -1017,7 +1017,7 @@
       <ul>
         <li><a href="#services">Services</a></li>
         <li><a href="#results">Results</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">Meet James</a></li>
         <li><a href="#areas">Service Area</a></li>
         <li><a href="#contact">Estimate</a></li>
         <li>
@@ -1033,68 +1033,62 @@
 
 <main id="top">
 
-  <!-- HERO -->
-
   <section class="hero">
 
     <div class="container hero-grid">
 
       <div>
 
-        <div class="eyebrow">
+        <div class="badge">
           ★ Veteran-Owned • Family-Operated
         </div>
 
         <h1>
-          BRING YOUR
-          <span>CARPETS BACK TO LIFE.</span>
+          BRING YOUR CARPETS
+          <span>BACK TO LIFE.</span>
         </h1>
 
         <p class="hero-copy">
           Pets. Kids. Spills. Heavy traffic. Life happens.
-          <strong>Before you replace your carpet, see if Restore can bring it back.</strong>
+          <strong>Before you replace it, see if Restore can bring it back.</strong>
           Professional carpet and floor care serving Yuba City and surrounding communities.
         </p>
 
         <div class="hero-buttons">
+
           <a class="btn btn-gold" href="tel:+15304157063">
             ☎ Call James
           </a>
 
-          <a class="btn btn-primary" href="sms:+15304157063">
+          <a class="btn btn-blue" href="sms:+15304157063">
             💬 Text for an Estimate
           </a>
 
           <a class="btn btn-outline" href="#results">
-            See Real Results ↓
+            See the Transformation ↓
           </a>
+
         </div>
 
-        <div class="trust-mini">
-          <span>Truck-Mounted Extraction</span>
+        <div class="hero-points">
+          <span>Professional Equipment</span>
           <span>Pet Stain & Odor Help</span>
-          <span>Real Local Results</span>
+          <span>Local Owner-Operated Service</span>
         </div>
 
       </div>
 
-      <div class="result-card">
+      <div class="hero-proof">
 
-        <div class="result-visual">
-          <div class="before-box">
-            <span class="photo-label">BEFORE</span>
-          </div>
-
-          <div class="after-box">
-            <span class="photo-label">AFTER</span>
-          </div>
+        <div class="proof-image">
+          <img
+            src="Before_After.png"
+            alt="Restore Carpet Cleaning before and after carpet cleaning"
+          >
         </div>
 
-        <div class="result-card-copy">
-          <strong>Real cleaning. Real transformation.</strong>
-          <p>
-            This space will feature one of James's strongest real before-and-after jobs.
-          </p>
+        <div class="proof-tag">
+          REAL RESTORE RESULT
         </div>
 
       </div>
@@ -1104,9 +1098,8 @@
   </section>
 
 
-  <!-- TRUST -->
+  <div class="trust">
 
-  <div class="trust-bar">
     <div class="container trust-grid">
 
       <div class="trust-item">
@@ -1116,100 +1109,105 @@
 
       <div class="trust-item">
         <strong>Family-Operated</strong>
-        <span>Personal local service</span>
+        <span>Local personal service</span>
       </div>
 
       <div class="trust-item">
-        <strong>Professional Equipment</strong>
-        <span>Hot-water extraction</span>
+        <strong>Professional Cleaning</strong>
+        <span>Deep-cleaning equipment</span>
       </div>
 
       <div class="trust-item">
-        <strong>Yuba City Area</strong>
-        <span>Residential floor care</span>
+        <strong>Yuba City Based</strong>
+        <span>Serving surrounding communities</span>
       </div>
 
     </div>
+
   </div>
 
-
-  <!-- SERVICES -->
 
   <section class="services" id="services">
 
     <div class="container">
 
       <div class="section-heading center">
+
         <div class="kicker">What We Clean</div>
-        <h2>More than just carpet.</h2>
+
+        <h2>
+          More than just carpet.
+        </h2>
+
         <p>
-          Professional cleaning for the surfaces that take the most abuse in your home.
+          Professional cleaning for the surfaces that take the most abuse.
         </p>
+
       </div>
 
       <div class="services-grid">
 
-        <div class="service-card">
-          <div class="service-icon">✦</div>
+        <div class="service">
+          <div class="icon">✦</div>
           <h3>Carpet Cleaning</h3>
           <p>
-            Deep residential carpet cleaning using professional hot-water extraction.
+            Deep carpet cleaning for rooms, hallways, stairs and high-traffic areas.
           </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">🐾</div>
+        <div class="service">
+          <div class="icon">🐾</div>
           <h3>Pet Stains & Odors</h3>
           <p>
-            Targeted treatment for pet stains, odors and problem areas.
+            Targeted treatment for pet spots, staining and lingering odors.
           </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">◫</div>
+        <div class="service">
+          <div class="icon">◫</div>
           <h3>Upholstery Cleaning</h3>
           <p>
             Sofas, sectionals, chairs, recliners and other upholstered furniture.
           </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">▦</div>
+        <div class="service">
+          <div class="icon">▦</div>
           <h3>Tile & Grout</h3>
           <p>
-            Cleaning for tile, grout and built-up grime in high-use areas.
+            Cleaning for tile, grout and built-up grime in high-use spaces.
           </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">◇</div>
+        <div class="service">
+          <div class="icon">◇</div>
           <h3>Area Rugs</h3>
           <p>
-            Rug cleaning, odor treatment, dirt removal and routine maintenance.
+            Cleaning, spot treatment, deodorizing and routine rug maintenance.
           </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">▤</div>
+        <div class="service">
+          <div class="icon">▤</div>
           <h3>Laminate Floors</h3>
           <p>
-            Professional cleaning for laminate flooring and high-traffic areas.
+            Professional care for laminate flooring and high-traffic areas.
           </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">⌂</div>
+        <div class="service">
+          <div class="icon">⌂</div>
           <h3>Engineered Floors</h3>
           <p>
-            Care and cleaning for engineered flooring surfaces.
+            Cleaning and maintenance for engineered flooring surfaces.
           </p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">✧</div>
-          <h3>Spot & Stain Removal</h3>
+        <div class="service">
+          <div class="icon">✧</div>
+          <h3>Spot & Stain Help</h3>
           <p>
-            Help with spills, high-traffic areas and stubborn carpet spots.
+            Treatment for spills, traffic marks and stubborn carpet spots.
           </p>
         </div>
 
@@ -1220,44 +1218,57 @@
   </section>
 
 
-  <!-- RESULTS -->
-
-  <section class="results-section" id="results">
+  <section class="results" id="results">
 
     <div class="container">
 
-      <div class="section-heading center">
-        <div class="kicker">Before + After</div>
-        <h2>See the difference.</h2>
+      <div class="section-heading">
+
+        <div class="kicker">Featured Transformation</div>
+
+        <h2>
+          See what Restore can do.
+        </h2>
+
         <p>
-          No stock-photo promises. This gallery will showcase Restore's actual cleaning work.
+          We would rather show you one real job than fill the site with stock photos.
         </p>
+
       </div>
 
-      <div class="results-grid">
 
-        <div class="result-tile">
-          <div class="result-tile-visual">
-            <div class="result-side dirty1">Before</div>
-            <div class="result-side clean1">After</div>
-          </div>
-          <p>Bedroom carpet transformation</p>
+      <div class="feature-result">
+
+        <div class="feature-photo">
+          <img
+            src="Before_After.png"
+            alt="Before and after professional carpet cleaning by Restore"
+          >
         </div>
 
-        <div class="result-tile">
-          <div class="result-tile-visual">
-            <div class="result-side dirty2">Before</div>
-            <div class="result-side clean2">After</div>
-          </div>
-          <p>High-traffic carpet restoration</p>
-        </div>
 
-        <div class="result-tile">
-          <div class="result-tile-visual">
-            <div class="result-side dirty3">Before</div>
-            <div class="result-side clean3">After</div>
+        <div class="feature-copy">
+
+          <h3>
+            The difference is in the carpet.
+          </h3>
+
+          <p>
+            Dirt and high-traffic wear can make carpet look older than it is.
+            Professional cleaning can often make a dramatic difference.
+          </p>
+
+          <div class="feature-list">
+            <div><b>✓</b> Deep soil removal</div>
+            <div><b>✓</b> High-traffic area cleaning</div>
+            <div><b>✓</b> Spot and stain treatment</div>
+            <div><b>✓</b> Freshened carpet fibers</div>
           </div>
-          <p>Whole-room refresh</p>
+
+          <a class="btn btn-gold" href="sms:+15304157063">
+            Ask James About Your Carpet
+          </a>
+
         </div>
 
       </div>
@@ -1266,54 +1277,54 @@
 
   </section>
 
-
-  <!-- ABOUT -->
 
   <section class="about" id="about">
 
     <div class="container about-grid">
 
-      <div class="owner-photo">
+      <div class="james-image">
 
-        <div>
-          <div class="initials">JJ</div>
+        <img
+          src="James.png"
+          alt="James Joyal of Restore Carpet Cleaning and Floor Care"
+        >
 
-          <h3>James Joyal</h3>
-
-          <p>
-            Owner of Restore Carpet Cleaning and Floor Care
-          </p>
+        <div class="james-caption">
+          <strong>James Joyal</strong>
+          <span>Owner • Restore Carpet Cleaning and Floor Care</span>
         </div>
 
       </div>
+
 
       <div class="about-copy">
 
         <div class="kicker">Meet James</div>
 
         <h2>
-          Your home isn't just another job.
+          Local service from the person behind the business.
         </h2>
 
         <p>
           Restore Carpet Cleaning and Floor Care is veteran-owned and
-          family-operated. James is a 22-year United States Air Force veteran
-          and longtime Yuba City-area resident.
+          family-operated.
         </p>
 
         <p>
-          His goal is simple: provide straightforward service, professional
-          cleaning and results customers can actually see.
+          James is a 22-year United States Air Force veteran and longtime
+          Yuba City-area resident. His goal is straightforward:
+          provide professional cleaning, clear communication and results
+          customers can actually see.
         </p>
 
         <div class="about-list">
-          <div><b>✓</b> Professional truck-mounted hot-water extraction</div>
-          <div><b>✓</b> Friendly, straightforward communication</div>
-          <div><b>✓</b> Residential carpet and floor care</div>
-          <div><b>✓</b> Local owner-operated service</div>
+          <div>Professional carpet and floor care</div>
+          <div>Friendly, straightforward communication</div>
+          <div>Local owner-operated service</div>
+          <div>Real before-and-after results</div>
         </div>
 
-        <a class="btn btn-primary" href="tel:+15304157063">
+        <a class="btn btn-blue" href="tel:+15304157063">
           Talk to James
         </a>
 
@@ -1324,43 +1335,105 @@
   </section>
 
 
-  <!-- PROCESS -->
+  <section class="truck-section">
+
+    <div class="truck-wrap">
+
+      <img
+        src="Truck.jpg"
+        alt="Restore Carpet Cleaning service vehicle"
+      >
+
+      <div class="truck-overlay">
+
+        <div class="container">
+
+          <div class="truck-copy">
+
+            <div class="kicker">
+              Local • Mobile • Professional
+            </div>
+
+            <h2>
+              Restore comes to you.
+            </h2>
+
+            <p>
+              Serving Yuba City and surrounding communities with professional
+              carpet and floor care.
+            </p>
+
+            <a class="btn btn-gold" href="sms:+15304157063">
+              Check Your Service Area
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="process">
 
     <div class="container">
 
       <div class="section-heading center">
+
         <div class="kicker">How It Works</div>
-        <h2>Simple. Professional. Done right.</h2>
+
+        <h2>
+          Simple. Professional. Done right.
+        </h2>
+
       </div>
+
 
       <div class="process-grid">
 
         <div class="process-card">
-          <div class="number">01</div>
+
+          <div class="num">01</div>
+
           <h3>Inspect & Assess</h3>
+
           <p>
-            James looks over the carpet or flooring and identifies problem areas,
-            stains and cleaning needs.
+            James checks the carpet or floor and identifies stains,
+            high-traffic areas and cleaning needs.
           </p>
+
         </div>
 
+
         <div class="process-card">
-          <div class="number">02</div>
+
+          <div class="num">02</div>
+
           <h3>Deep Clean & Restore</h3>
+
           <p>
-            Professional equipment, pretreatment and hot-water extraction are used
-            where appropriate.
+            Professional cleaning equipment and treatments are used
+            based on the surface and condition.
           </p>
+
         </div>
 
+
         <div class="process-card">
-          <div class="number">03</div>
+
+          <div class="num">03</div>
+
           <h3>Final Walkthrough</h3>
+
           <p>
-            Review the finished result and receive practical drying and care guidance.
+            Review the finished result and get practical drying
+            and care guidance.
           </p>
+
         </div>
 
       </div>
@@ -1369,58 +1442,78 @@
 
   </section>
 
-
-  <!-- REVIEWS -->
 
   <section class="reviews">
 
     <div class="container">
 
       <div class="section-heading center">
+
         <div class="kicker">Customer Feedback</div>
-        <h2>Results people notice.</h2>
+
+        <h2>
+          Results people notice.
+        </h2>
+
         <p>
           Real feedback from Restore customers.
         </p>
+
       </div>
+
 
       <div class="reviews-grid">
 
         <div class="review">
-          <div class="stars">★★★★★</div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
           <blockquote>
             “Amazing service left my carpet looking new.”
           </blockquote>
+
           <cite>— Jerry Q.</cite>
+
         </div>
 
+
         <div class="review">
-          <div class="stars">★★★★★</div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
           <blockquote>
-            “The best! Great work and great price. I recommend James and his team to everyone.”
+            “The best! Great work and great price. I recommend James
+            and his team to everyone. Thanks Restore!!”
           </blockquote>
+
           <cite>— Customer review</cite>
+
         </div>
 
       </div>
 
-      <div style="text-align:center; margin-top:32px;">
+
+      <div style="text-align:center;margin-top:30px">
+
         <a
           class="btn btn-gold"
           href="https://g.page/r/Cbte6VhaXyrkEBM/review"
           target="_blank"
           rel="noopener"
         >
-          Leave a Google Review
+          Leave Restore a Google Review
         </a>
+
       </div>
 
     </div>
 
   </section>
 
-
-  <!-- AREAS -->
 
   <section id="areas">
 
@@ -1429,14 +1522,22 @@
       <div>
 
         <div class="section-heading">
+
           <div class="kicker">Service Area</div>
-          <h2>Serving Yuba City and surrounding communities.</h2>
+
+          <h2>
+            Serving Yuba City and surrounding communities.
+          </h2>
+
           <p>
-            Not sure whether you're in range? Call or text James and ask.
+            Not sure whether you're in range? Text James your city and ask.
           </p>
+
         </div>
 
-        <div class="city-tags">
+
+        <div class="cities">
+
           <span>Yuba City</span>
           <span>Marysville</span>
           <span>Olivehurst</span>
@@ -1449,9 +1550,11 @@
           <span>Tierra Buena</span>
           <span>Beale AFB</span>
           <span>Lincoln</span>
+
         </div>
 
       </div>
+
 
       <div class="area-card">
 
@@ -1460,7 +1563,8 @@
         </h3>
 
         <p>
-          Send James your city and what you need cleaned. He'll let you know if Restore serves your area.
+          Tell James your city and what you need cleaned.
+          He'll let you know whether Restore serves your location.
         </p>
 
         <a class="btn btn-gold" href="sms:+15304157063">
@@ -1473,8 +1577,6 @@
 
   </section>
 
-
-  <!-- CTA -->
 
   <section class="cta">
 
@@ -1493,36 +1595,46 @@
   </section>
 
 
-  <!-- CONTACT -->
-
   <section class="contact" id="contact">
 
     <div class="container contact-grid">
 
-      <div class="contact-info">
+      <div class="contact-card">
 
-        <h3>Let's talk about your floors.</h3>
+        <h3>
+          Let's talk about your floors.
+        </h3>
 
-        <div class="contact-row">
+
+        <div class="info">
           <small>Call or Text</small>
-          <a href="tel:+15304157063">530-415-7063</a>
+          <a href="tel:+15304157063">
+            530-415-7063
+          </a>
         </div>
 
-        <div class="contact-row">
+
+        <div class="info">
           <small>Email</small>
           <a href="mailto:restorecarpetfloorcare@gmail.com">
             restorecarpetfloorcare@gmail.com
           </a>
         </div>
 
-        <div class="contact-row">
+
+        <div class="info">
           <small>Hours</small>
-          <span>7:00 AM – 5:00 PM Daily</span>
+          <span>
+            7:00 AM – 5:00 PM Daily
+          </span>
         </div>
 
-        <div class="contact-row">
+
+        <div class="info">
           <small>Based in</small>
-          <span>Yuba City, California</span>
+          <span>
+            Yuba City, California
+          </span>
         </div>
 
       </div>
@@ -1531,29 +1643,43 @@
       <div>
 
         <div class="section-heading">
-          <div class="kicker">Request an Estimate</div>
-          <h2>Tell James what you need cleaned.</h2>
+
+          <div class="kicker">
+            Request an Estimate
+          </div>
+
+          <h2>
+            Tell James what you need cleaned.
+          </h2>
+
         </div>
 
-        <form class="estimate-form" id="estimateForm">
+
+        <form id="estimateForm">
 
           <div class="field">
             <label for="name">Name</label>
-            <input id="name" required />
+            <input id="name" required>
           </div>
+
 
           <div class="field">
             <label for="phone">Phone</label>
-            <input id="phone" type="tel" required />
+            <input id="phone" type="tel" required>
           </div>
+
 
           <div class="field">
             <label for="city">City</label>
-            <input id="city" required />
+            <input id="city" required>
           </div>
 
+
           <div class="field">
-            <label for="service">Service</label>
+
+            <label for="service">
+              Service
+            </label>
 
             <select id="service">
               <option>Carpet Cleaning</option>
@@ -1565,22 +1691,31 @@
               <option>Engineered Floor Cleaning</option>
               <option>Other</option>
             </select>
+
           </div>
 
+
           <div class="field full">
-            <label for="details">Tell us about the job</label>
+
+            <label for="details">
+              Tell us about the job
+            </label>
+
             <textarea
               id="details"
               placeholder="Rooms, stains, pets, furniture, floor type, or anything else James should know."
             ></textarea>
+
           </div>
 
-          <button class="form-button" type="submit">
+
+          <button class="submit" type="submit">
             Send Estimate Request
           </button>
 
-          <div class="form-note">
-            This opens an email addressed to Restore with your estimate details.
+
+          <div class="note">
+            This opens an email to Restore with your estimate information already filled in.
           </div>
 
         </form>
@@ -1599,18 +1734,34 @@
   <div class="container footer-grid">
 
     <div>
-      <strong>Restore Carpet Cleaning and Floor Care</strong>
+
+      <div class="footer-brand">
+
+        <img
+          src="Logo.jpg"
+          alt="Restore Carpet Cleaning logo"
+        >
+
+        <div>
+          <strong>
+            Restore Carpet Cleaning and Floor Care
+          </strong>
+        </div>
+
+      </div>
 
       <p>
-        Veteran-owned and family-operated carpet and floor care serving
-        Yuba City and surrounding communities.
+        Veteran-owned and family-operated carpet and floor care
+        serving Yuba City and surrounding communities.
       </p>
+
     </div>
+
 
     <div class="footer-links">
       <a href="#services">Services</a>
-      <a href="#results">Before & After</a>
-      <a href="#about">About</a>
+      <a href="#results">Results</a>
+      <a href="#about">Meet James</a>
       <a href="#areas">Service Area</a>
       <a href="#contact">Estimate</a>
     </div>
@@ -1621,6 +1772,7 @@
 
 
 <div class="mobile-actions">
+
   <a class="mobile-call" href="tel:+15304157063">
     ☎ CALL
   </a>
@@ -1628,53 +1780,54 @@
   <a class="mobile-text" href="sms:+15304157063">
     💬 TEXT
   </a>
+
 </div>
 
 
 <script>
 
-  document
-    .getElementById("estimateForm")
-    .addEventListener("submit", function(event) {
+document
+  .getElementById("estimateForm")
+  .addEventListener("submit", function(event) {
 
-      event.preventDefault();
+    event.preventDefault();
 
-      const name =
-        document.getElementById("name").value;
+    const name =
+      document.getElementById("name").value;
 
-      const phone =
-        document.getElementById("phone").value;
+    const phone =
+      document.getElementById("phone").value;
 
-      const city =
-        document.getElementById("city").value;
+    const city =
+      document.getElementById("city").value;
 
-      const service =
-        document.getElementById("service").value;
+    const service =
+      document.getElementById("service").value;
 
-      const details =
-        document.getElementById("details").value;
+    const details =
+      document.getElementById("details").value;
 
-      const subject =
-        encodeURIComponent(
-          "Estimate Request - " + service
-        );
+    const subject =
+      encodeURIComponent(
+        "Estimate Request - " + service
+      );
 
-      const body =
-        encodeURIComponent(
-          "New Estimate Request\n\n" +
-          "Name: " + name + "\n" +
-          "Phone: " + phone + "\n" +
-          "City: " + city + "\n" +
-          "Service: " + service + "\n\n" +
-          "Job Details:\n" + details
-        );
+    const body =
+      encodeURIComponent(
+        "New Estimate Request\n\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "City: " + city + "\n" +
+        "Service: " + service + "\n\n" +
+        "Job Details:\n" + details
+      );
 
-      window.location.href =
-        "mailto:restorecarpetfloorcare@gmail.com" +
-        "?subject=" + subject +
-        "&body=" + body;
+    window.location.href =
+      "mailto:restorecarpetfloorcare@gmail.com" +
+      "?subject=" + subject +
+      "&body=" + body;
 
-    });
+  });
 
 </script>
 
