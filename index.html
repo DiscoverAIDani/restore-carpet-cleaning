@@ -23,6 +23,7 @@
       --ink: #111820;
       --muted: #65727c;
       --line: #dfe5e8;
+      --green: #1fa66a;
       --shadow: 0 24px 60px rgba(0,0,0,.18);
       --radius: 24px;
     }
@@ -315,7 +316,7 @@
       font-size: .8rem;
     }
 
-    /* SECTIONS */
+    /* GENERAL */
 
     section {
       padding: 95px 0;
@@ -401,7 +402,7 @@
       font-size: .91rem;
     }
 
-    /* FEATURED RESULT */
+    /* RESULT */
 
     .results {
       background: var(--navy);
@@ -420,7 +421,6 @@
     }
 
     .feature-photo {
-      position: relative;
       background: white;
       padding: 10px;
       border-radius: 28px;
@@ -452,14 +452,9 @@
       margin: 28px 0;
     }
 
-    .feature-list div {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
     .feature-list b {
       color: var(--gold);
+      margin-right: 7px;
     }
 
     /* ABOUT */
@@ -807,6 +802,13 @@
       background: #fbfcfd;
     }
 
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 3px solid rgba(19,139,208,.15);
+      border-color: var(--blue);
+    }
+
     textarea {
       min-height: 120px;
       resize: vertical;
@@ -824,10 +826,37 @@
       cursor: pointer;
     }
 
+    .submit:disabled {
+      opacity: .7;
+      cursor: wait;
+    }
+
     .note {
       grid-column: 1 / -1;
       color: #77858e;
       font-size: .78rem;
+    }
+
+    .form-status {
+      display: none;
+      grid-column: 1 / -1;
+      padding: 13px 15px;
+      border-radius: 11px;
+      font-weight: 800;
+    }
+
+    .form-status.success {
+      display: block;
+      background: #e7f8ef;
+      color: #126b45;
+      border: 1px solid #a9e0c3;
+    }
+
+    .form-status.error {
+      display: block;
+      background: #fff0f0;
+      color: #9c2c2c;
+      border: 1px solid #efb4b4;
     }
 
     /* FOOTER */
@@ -874,14 +903,13 @@
       font-size: .88rem;
     }
 
-    /* MOBILE BAR */
+    /* MOBILE */
 
     .mobile-actions {
       display: none;
     }
 
     @media (max-width: 900px) {
-
       nav ul {
         display: none;
       }
@@ -922,7 +950,6 @@
     }
 
     @media (max-width: 600px) {
-
       body {
         padding-bottom: 68px;
       }
@@ -957,7 +984,8 @@
 
       .full,
       .submit,
-      .note {
+      .note,
+      .form-status {
         grid-column: 1;
       }
 
@@ -1007,6 +1035,7 @@
 
     <a href="#top" class="logo-wrap">
       <img src="Logo.jpg" alt="Restore Carpet Cleaning logo">
+
       <div class="logo-text">
         <strong>Restore Carpet Cleaning</strong>
         <span>and Floor Care</span>
@@ -1020,6 +1049,7 @@
         <li><a href="#about">Meet James</a></li>
         <li><a href="#areas">Service Area</a></li>
         <li><a href="#contact">Estimate</a></li>
+
         <li>
           <a class="nav-call" href="tel:+15304157063">
             Call 530-415-7063
@@ -1031,7 +1061,10 @@
   </div>
 </header>
 
+
 <main id="top">
+
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -1050,8 +1083,11 @@
 
         <p class="hero-copy">
           Pets. Kids. Spills. Heavy traffic. Life happens.
-          <strong>Before you replace it, see if Restore can bring it back.</strong>
-          Professional carpet and floor care serving Yuba City and surrounding communities.
+          <strong>
+            Before you replace it, see if Restore can bring it back.
+          </strong>
+          Professional carpet and floor care serving Yuba City
+          and surrounding communities.
         </p>
 
         <div class="hero-buttons">
@@ -1078,6 +1114,7 @@
 
       </div>
 
+
       <div class="hero-proof">
 
         <div class="proof-image">
@@ -1097,6 +1134,8 @@
 
   </section>
 
+
+  <!-- TRUST -->
 
   <div class="trust">
 
@@ -1127,6 +1166,8 @@
   </div>
 
 
+  <!-- SERVICES -->
+
   <section class="services" id="services">
 
     <div class="container">
@@ -1135,9 +1176,7 @@
 
         <div class="kicker">What We Clean</div>
 
-        <h2>
-          More than just carpet.
-        </h2>
+        <h2>More than just carpet.</h2>
 
         <p>
           Professional cleaning for the surfaces that take the most abuse.
@@ -1145,13 +1184,15 @@
 
       </div>
 
+
       <div class="services-grid">
 
         <div class="service">
           <div class="icon">✦</div>
           <h3>Carpet Cleaning</h3>
           <p>
-            Deep carpet cleaning for rooms, hallways, stairs and high-traffic areas.
+            Deep carpet cleaning for rooms, hallways, stairs
+            and high-traffic areas.
           </p>
         </div>
 
@@ -1159,7 +1200,8 @@
           <div class="icon">🐾</div>
           <h3>Pet Stains & Odors</h3>
           <p>
-            Targeted treatment for pet spots, staining and lingering odors.
+            Targeted treatment for pet spots, staining
+            and lingering odors.
           </p>
         </div>
 
@@ -1167,7 +1209,8 @@
           <div class="icon">◫</div>
           <h3>Upholstery Cleaning</h3>
           <p>
-            Sofas, sectionals, chairs, recliners and other upholstered furniture.
+            Sofas, sectionals, chairs, recliners
+            and other upholstered furniture.
           </p>
         </div>
 
@@ -1175,7 +1218,8 @@
           <div class="icon">▦</div>
           <h3>Tile & Grout</h3>
           <p>
-            Cleaning for tile, grout and built-up grime in high-use spaces.
+            Cleaning for tile, grout and built-up grime
+            in high-use spaces.
           </p>
         </div>
 
@@ -1183,7 +1227,8 @@
           <div class="icon">◇</div>
           <h3>Area Rugs</h3>
           <p>
-            Cleaning, spot treatment, deodorizing and routine rug maintenance.
+            Cleaning, spot treatment, deodorizing
+            and routine rug maintenance.
           </p>
         </div>
 
@@ -1191,7 +1236,8 @@
           <div class="icon">▤</div>
           <h3>Laminate Floors</h3>
           <p>
-            Professional care for laminate flooring and high-traffic areas.
+            Professional care for laminate flooring
+            and high-traffic areas.
           </p>
         </div>
 
@@ -1207,7 +1253,8 @@
           <div class="icon">✧</div>
           <h3>Spot & Stain Help</h3>
           <p>
-            Treatment for spills, traffic marks and stubborn carpet spots.
+            Treatment for spills, traffic marks
+            and stubborn carpet spots.
           </p>
         </div>
 
@@ -1218,6 +1265,8 @@
   </section>
 
 
+  <!-- RESULTS -->
+
   <section class="results" id="results">
 
     <div class="container">
@@ -1226,12 +1275,11 @@
 
         <div class="kicker">Featured Transformation</div>
 
-        <h2>
-          See what Restore can do.
-        </h2>
+        <h2>See what Restore can do.</h2>
 
         <p>
-          We would rather show you one real job than fill the site with stock photos.
+          We would rather show you a real job than fill the site
+          with stock photos.
         </p>
 
       </div>
@@ -1240,10 +1288,12 @@
       <div class="feature-result">
 
         <div class="feature-photo">
+
           <img
             src="Before_After.png"
             alt="Before and after professional carpet cleaning by Restore"
           >
+
         </div>
 
 
@@ -1254,8 +1304,9 @@
           </h3>
 
           <p>
-            Dirt and high-traffic wear can make carpet look older than it is.
-            Professional cleaning can often make a dramatic difference.
+            Dirt and high-traffic wear can make carpet look older
+            than it is. Professional cleaning can often make
+            a dramatic difference.
           </p>
 
           <div class="feature-list">
@@ -1265,8 +1316,8 @@
             <div><b>✓</b> Freshened carpet fibers</div>
           </div>
 
-          <a class="btn btn-gold" href="sms:+15304157063">
-            Ask James About Your Carpet
+          <a class="btn btn-gold" href="#contact">
+            Get an Estimate
           </a>
 
         </div>
@@ -1277,6 +1328,8 @@
 
   </section>
 
+
+  <!-- ABOUT -->
 
   <section class="about" id="about">
 
@@ -1291,7 +1344,9 @@
 
         <div class="james-caption">
           <strong>James Joyal</strong>
-          <span>Owner • Restore Carpet Cleaning and Floor Care</span>
+          <span>
+            Owner • Restore Carpet Cleaning and Floor Care
+          </span>
         </div>
 
       </div>
@@ -1306,22 +1361,25 @@
         </h2>
 
         <p>
-          Restore Carpet Cleaning and Floor Care is veteran-owned and
-          family-operated.
+          Restore Carpet Cleaning and Floor Care is veteran-owned
+          and family-operated.
         </p>
 
         <p>
-          James is a 22-year United States Air Force veteran and longtime
-          Yuba City-area resident. His goal is straightforward:
-          provide professional cleaning, clear communication and results
-          customers can actually see.
+          James is a 22-year United States Air Force veteran
+          and longtime Yuba City-area resident.
+        </p>
+
+        <p>
+          His goal is straightforward: provide professional cleaning,
+          clear communication and results customers can actually see.
         </p>
 
         <div class="about-list">
           <div>Professional carpet and floor care</div>
           <div>Friendly, straightforward communication</div>
           <div>Local owner-operated service</div>
-          <div>Real before-and-after results</div>
+          <div>Residential and commercial cleaning</div>
         </div>
 
         <a class="btn btn-blue" href="tel:+15304157063">
@@ -1334,6 +1392,8 @@
 
   </section>
 
+
+  <!-- TRUCK -->
 
   <section class="truck-section">
 
@@ -1359,12 +1419,12 @@
             </h2>
 
             <p>
-              Serving Yuba City and surrounding communities with professional
-              carpet and floor care.
+              Serving Yuba City and surrounding communities
+              with professional carpet and floor care.
             </p>
 
-            <a class="btn btn-gold" href="sms:+15304157063">
-              Check Your Service Area
+            <a class="btn btn-gold" href="#contact">
+              Request an Estimate
             </a>
 
           </div>
@@ -1377,6 +1437,8 @@
 
   </section>
 
+
+  <!-- PROCESS -->
 
   <section class="process">
 
@@ -1416,8 +1478,8 @@
           <h3>Deep Clean & Restore</h3>
 
           <p>
-            Professional cleaning equipment and treatments are used
-            based on the surface and condition.
+            Professional cleaning equipment and treatments
+            are used based on the surface and condition.
           </p>
 
         </div>
@@ -1443,13 +1505,17 @@
   </section>
 
 
+  <!-- REVIEWS -->
+
   <section class="reviews">
 
     <div class="container">
 
       <div class="section-heading center">
 
-        <div class="kicker">Customer Feedback</div>
+        <div class="kicker">
+          Customer Feedback
+        </div>
 
         <h2>
           Results people notice.
@@ -1486,8 +1552,9 @@
           </div>
 
           <blockquote>
-            “The best! Great work and great price. I recommend James
-            and his team to everyone. Thanks Restore!!”
+            “The best! Great work and great price.
+            I recommend James and his team to everyone.
+            Thanks Restore!!”
           </blockquote>
 
           <cite>— Customer review</cite>
@@ -1515,6 +1582,8 @@
   </section>
 
 
+  <!-- SERVICE AREA -->
+
   <section id="areas">
 
     <div class="container area-grid">
@@ -1523,14 +1592,17 @@
 
         <div class="section-heading">
 
-          <div class="kicker">Service Area</div>
+          <div class="kicker">
+            Service Area
+          </div>
 
           <h2>
             Serving Yuba City and surrounding communities.
           </h2>
 
           <p>
-            Not sure whether you're in range? Text James your city and ask.
+            Not sure whether you're in range?
+            Call or text James and ask.
           </p>
 
         </div>
@@ -1578,6 +1650,8 @@
   </section>
 
 
+  <!-- CTA -->
+
   <section class="cta">
 
     <div class="container cta-grid">
@@ -1586,14 +1660,16 @@
         Before you replace it, see if Restore can bring it back.
       </h2>
 
-      <a class="btn" href="tel:+15304157063">
-        Call James Now
+      <a class="btn" href="#contact">
+        Get an Estimate
       </a>
 
     </div>
 
   </section>
 
+
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
@@ -1607,34 +1683,54 @@
 
 
         <div class="info">
-          <small>Call or Text</small>
+
+          <small>
+            Call or Text
+          </small>
+
           <a href="tel:+15304157063">
             530-415-7063
           </a>
+
         </div>
 
 
         <div class="info">
-          <small>Email</small>
+
+          <small>
+            Email
+          </small>
+
           <a href="mailto:restorecarpetfloorcare@gmail.com">
             restorecarpetfloorcare@gmail.com
           </a>
+
         </div>
 
 
         <div class="info">
-          <small>Hours</small>
+
+          <small>
+            Hours
+          </small>
+
           <span>
             7:00 AM – 5:00 PM Daily
           </span>
+
         </div>
 
 
         <div class="info">
-          <small>Based in</small>
+
+          <small>
+            Based in
+          </small>
+
           <span>
             Yuba City, California
           </span>
+
         </div>
 
       </div>
@@ -1652,26 +1748,61 @@
             Tell James what you need cleaned.
           </h2>
 
+          <p>
+            Fill this out and your request will go directly
+            into Restore's lead list.
+          </p>
+
         </div>
 
 
         <form id="estimateForm">
 
           <div class="field">
-            <label for="name">Name</label>
-            <input id="name" required>
+
+            <label for="name">
+              Name
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            >
+
           </div>
 
 
           <div class="field">
-            <label for="phone">Phone</label>
-            <input id="phone" type="tel" required>
+
+            <label for="phone">
+              Phone
+            </label>
+
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              required
+            >
+
           </div>
 
 
           <div class="field">
-            <label for="city">City</label>
-            <input id="city" required>
+
+            <label for="city">
+              City
+            </label>
+
+            <input
+              id="city"
+              name="city"
+              required
+            >
+
           </div>
 
 
@@ -1681,15 +1812,42 @@
               Service
             </label>
 
-            <select id="service">
+            <select id="service" name="service">
+
               <option>Carpet Cleaning</option>
-              <option>Pet Stain & Odor Treatment</option>
-              <option>Upholstery Cleaning</option>
-              <option>Area Rug Cleaning</option>
-              <option>Tile & Grout Cleaning</option>
-              <option>Laminate Floor Cleaning</option>
-              <option>Engineered Floor Cleaning</option>
-              <option>Other</option>
+
+              <option>
+                Pet Stain & Odor Treatment
+              </option>
+
+              <option>
+                Upholstery Cleaning
+              </option>
+
+              <option>
+                Area Rug Cleaning
+              </option>
+
+              <option>
+                Tile & Grout Cleaning
+              </option>
+
+              <option>
+                Laminate Floor Cleaning
+              </option>
+
+              <option>
+                Engineered Floor Cleaning
+              </option>
+
+              <option>
+                Commercial Cleaning
+              </option>
+
+              <option>
+                Other
+              </option>
+
             </select>
 
           </div>
@@ -1703,20 +1861,32 @@
 
             <textarea
               id="details"
-              placeholder="Rooms, stains, pets, furniture, floor type, or anything else James should know."
+              name="details"
+              placeholder="Rooms, stains, pets, furniture, floor type, commercial space, or anything else James should know."
             ></textarea>
 
           </div>
 
 
-          <button class="submit" type="submit">
+          <button
+            class="submit"
+            id="submitButton"
+            type="submit"
+          >
             Send Estimate Request
           </button>
 
 
           <div class="note">
-            This opens an email to Restore with your estimate information already filled in.
+            Your estimate request will be sent directly to Restore.
           </div>
+
+
+          <div
+            id="formStatus"
+            class="form-status"
+            aria-live="polite"
+          ></div>
 
         </form>
 
@@ -1728,6 +1898,8 @@
 
 </main>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -1759,11 +1931,27 @@
 
 
     <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#results">Results</a>
-      <a href="#about">Meet James</a>
-      <a href="#areas">Service Area</a>
-      <a href="#contact">Estimate</a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#results">
+        Results
+      </a>
+
+      <a href="#about">
+        Meet James
+      </a>
+
+      <a href="#areas">
+        Service Area
+      </a>
+
+      <a href="#contact">
+        Estimate
+      </a>
+
     </div>
 
   </div>
@@ -1771,65 +1959,169 @@
 </footer>
 
 
+<!-- MOBILE CALL/TEXT BAR -->
+
 <div class="mobile-actions">
 
-  <a class="mobile-call" href="tel:+15304157063">
+  <a
+    class="mobile-call"
+    href="tel:+15304157063"
+  >
     ☎ CALL
   </a>
 
-  <a class="mobile-text" href="sms:+15304157063">
+  <a
+    class="mobile-text"
+    href="sms:+15304157063"
+  >
     💬 TEXT
   </a>
 
 </div>
 
 
+<!-- LEAD FORM -->
+
 <script>
 
-document
-  .getElementById("estimateForm")
-  .addEventListener("submit", function(event) {
+const LEAD_URL =
+  "https://script.google.com/macros/s/AKfycby-DEBhAR81EC0KxMaVTpMnvpPtcyOVFf97xW2l--lBIVEkx_NFWmI2g4511VprHwbf/exec";
+
+
+const estimateForm =
+  document.getElementById("estimateForm");
+
+const submitButton =
+  document.getElementById("submitButton");
+
+const formStatus =
+  document.getElementById("formStatus");
+
+
+estimateForm.addEventListener(
+  "submit",
+  async function(event) {
 
     event.preventDefault();
 
-    const name =
-      document.getElementById("name").value;
 
-    const phone =
-      document.getElementById("phone").value;
+    const data = {
 
-    const city =
-      document.getElementById("city").value;
+      name:
+        document
+          .getElementById("name")
+          .value
+          .trim(),
 
-    const service =
-      document.getElementById("service").value;
+      phone:
+        document
+          .getElementById("phone")
+          .value
+          .trim(),
 
-    const details =
-      document.getElementById("details").value;
+      city:
+        document
+          .getElementById("city")
+          .value
+          .trim(),
 
-    const subject =
-      encodeURIComponent(
-        "Estimate Request - " + service
+      service:
+        document
+          .getElementById("service")
+          .value,
+
+      details:
+        document
+          .getElementById("details")
+          .value
+          .trim()
+
+    };
+
+
+    formStatus.className =
+      "form-status";
+
+    formStatus.textContent =
+      "";
+
+
+    submitButton.disabled =
+      true;
+
+    submitButton.textContent =
+      "Sending...";
+
+
+    try {
+
+      await fetch(
+        LEAD_URL,
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type":
+              "text/plain;charset=utf-8"
+          },
+          body:
+            JSON.stringify(data)
+        }
       );
 
-    const body =
-      encodeURIComponent(
-        "New Estimate Request\n\n" +
-        "Name: " + name + "\n" +
-        "Phone: " + phone + "\n" +
-        "City: " + city + "\n" +
-        "Service: " + service + "\n\n" +
-        "Job Details:\n" + details
+
+      estimateForm.reset();
+
+
+      formStatus.className =
+        "form-status success";
+
+      formStatus.textContent =
+        "✓ Thanks! Your estimate request was sent. James will get back to you as soon as possible.";
+
+
+      submitButton.textContent =
+        "✓ Request Sent";
+
+
+      setTimeout(
+        function() {
+
+          submitButton.disabled =
+            false;
+
+          submitButton.textContent =
+            "Send Estimate Request";
+
+        },
+        3500
       );
 
-    window.location.href =
-      "mailto:restorecarpetfloorcare@gmail.com" +
-      "?subject=" + subject +
-      "&body=" + body;
 
-  });
+    } catch (error) {
+
+
+      formStatus.className =
+        "form-status error";
+
+      formStatus.textContent =
+        "We couldn't send the form. Please call or text James at 530-415-7063.";
+
+
+      submitButton.disabled =
+        false;
+
+      submitButton.textContent =
+        "Try Again";
+
+
+    }
+
+  }
+);
 
 </script>
+
 
 </body>
 </html>
